@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegio Santo Tomás Chía</title>
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+
+  <!-- PANTALLA DE CARGA GAMER -->
+  <div id="gamer-loader">
+    <div class="loader-container">
+      <div class="loader-ring"></div>
+      <div class="loader-ring-inner"></div>
+      
+      <div class="loader-logo">
+        <img src="../imagenes/logo video juegos.png" alt="Logo Web Gamer" class="logo-img">
+      </div>
+    </div>
+    
+    <div class="loader-bar-container" id="bar-container">
+      <div id="loader-bar" class="loader-bar"></div>
+    </div>
+    
+    <div class="loader-text-group">
+      <span id="loader-title" class="loader-title">LOADING...</span>
+      <span id="loader-percent" class="loader-percent">0%</span>
+      <p id="loader-status" class="loader-status">PREPARANDO LA PARTIDA</p>
+      
+      <button id="start-btn" class="start-btn hidden">PRESS START</button>
+    </div>
+  </div>
+
+  <!-- Audio libre de derechos -->
+  <audio id="start-sound" src="../videos/poorartistt-cinematic-whoosh-sfx-type-01-566464.mp3" preload="auto"></audio>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-container">
+        <div class="top-bar-content">
+          <span class="phone-info">
+            <strong>LLÁMANOS +3008450894</strong>
+          </span>
+          <div class="social-links">
+            <span class="social-label">SÍGUENOS</span>
+            <a href="https://www.instagram.com/csantotochia/" aria-label="Instagram" id="instagramicon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/santotochia" aria-label="Facebook" id="facebookicon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03.78-1.5 1.75-1.5H18V2.14c-.42-.06-1.48-.14-2.81-.14-3.32 0-5.19 1.83-5.19 5.4v2.1H7v4h3v10.5h4V13.5z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UCjSazW1Ot1Mr_ROTHzRZefw/videos" aria-label="YouTube" id="youtubeicon">
+              <svg width="18" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="main-header-container">
+        <a href="#" class="logo">
+          <img src="../imagenes/logo video juegos.png" alt="Colegio Santo Tomás Chía">
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="https://colegiosantotomaschia.edu.co/">INICIO</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/nosotros/">SOBRE NOSOTROS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/admisiones-2022/">ADMISIONES</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/egresados/">EGRESADOS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/plataformas/">PLATAFORMAS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/habla-con-nosotros/">CONTÁCTANOS</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Buscar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <button class="icon-btn" aria-label="Menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- JAVASCRIPT MOVIDO AL FINAL DEL BODY -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loaderBar = document.getElementById('loader-bar');
+    const loaderPercent = document.getElementById('loader-percent');
+    const loaderStatus = document.getElementById('loader-status');
+    const loaderTitle = document.getElementById('loader-title');
+    const barContainer = document.getElementById('bar-container');
+    const startBtn = document.getElementById('start-btn');
+    const gamerLoader = document.getElementById('gamer-loader');
+    const startSound = document.getElementById('start-sound');
+
+    let currentPercent = 0;
+    const totalDuration = 1500; // 1.5 segundos en total
+    const intervalTime = 30; // Actualización cada 30 ms para máxima fluidez
+    const steps = totalDuration / intervalTime;
+    const increment = 100 / steps;
+
+    // Animación de la barra del 0% al 100% calibrada a 1.5 segundos
+    const interval = setInterval(() => {
+      currentPercent += increment;
+
+      if (currentPercent >= 100) {
+        currentPercent = 100;
+        clearInterval(interval);
+        updateProgress(100);
+
+        // Transición inmediata al botón START tras completar los 1.5s
+        barContainer.classList.add('hidden');
+        loaderPercent.classList.add('hidden');
+        loaderTitle.classList.add('hidden');
+        loaderStatus.textContent = "SISTEMA LISTO";
+        
+        startBtn.classList.remove('hidden');
+      } else {
+        updateProgress(Math.floor(currentPercent));
+      }
+    }, intervalTime);
+
+    function updateProgress(value) {
+      loaderBar.style.width = value + '%';
+      loaderPercent.textContent = value + '%';
+    }
+
+    // Acción al presionar START
+    startBtn.addEventListener('click', () => {
+      startSound.play().catch(() => {});
+      startBtn.style.transform = 'scale(0.9)';
+      
+      setTimeout(() => {
+        gamerLoader.classList.add('fade-out');
+        setTimeout(() => {
+          gamerLoader.classList.add('hidden');
+        }, 500);
+      }, 200);
+    });
+  });
+  </script>
+<!-- SECCIÓN HERO (INICIO GAMER & ROBÓTICA) -->
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-container">
+        
+        <!-- Lado Izquierdo: Mensaje de Bienvenida Gamer -->
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>GAMEBOTS EXPO 2026</span>
+          </div>
+          <h1 class="hero-title">
+            SECCION <br>
+            DE VIDEOJUEGOS COLEGIO SANTO TOMAS CHIA <br>
+            <span class="text-glow">DESCRUBRE MAS.</span>
+          </h1>
+          <p class="hero-description">
+            Bienvenido al portal oficial de GAMEBOTS EXPO del Colegio Santo Tomás Chía. Desarrolla tus habilidades con los videojuegos y robótica creados por nuestros estudiantes.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#videojuegos" class="btn-primaryR">
+              
+              <span>MUNDO GAMER</span>
+            </a>
+            <a href="proyectosRobotica.html" class="btn-primary">
+              <span>AREA DE ROBÓTICA</span>
+              
+            </a>
+            
+          </div>
+
+          <!-- Stats rápidas gamer -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">+30</span>
+              <span class="stat-label">Juegos Creados</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">+50</span>
+              <span class="stat-label" id="videojuegos">Estudiantes que realizaron estos proyectos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Tecnología STEM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lado Derecho: Tarjeta Interactiva / Showcase -->
+        <div class="hero-media">
+          <div class="robot-card">
+            <div class="card-tag">LOGO VIDEOJUEGOS COLEGIO SANTO TOMAS</div>
+            <div class="robot-image-wrapper">
+              <!-- Reemplaza la ruta por la imagen de tu robot -->
+              <img src="../imagenes/logo video juegos.png" alt="Robot Cyber Tomasino" class="robot-img">
+            </div>
+            <div class="card-info">
+            
+              <h3>Nuestros estudiantes desarrollaron una variedad de proyectos enfocados en el entretenimiento.</h3>
+              <div class="stats-bar">
+                <div class="stat-row">
+          
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- ENCABEZADO -->
+    <header class="hero">
+
+        <div class="hero-contenido">
+
+            <span class="subtitulo" >🎮 PROYECTO INTERACTIVO</span>
+
+            <h1>NUESTROS MÓDULOS<br>DE VIDEOJUEGOS</h1>
+
+            <p>
+                Explora, juega y descubre las increíbles creaciones
+                desarrolladas por nuestros estudiantes.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- MÓDULOS -->
+    <main class="contenedor">
+
+        
+        <!-- SCRATCH -->
+        <section class="tarjeta">
+
+            <div class="icono">
+                🐱
+            </div>
+
+            <span class="nivel">
+                GRADO 6°
+            </span>
+
+            <h2>Scratch</h2>
+
+            <p>
+                ¡Supera el siguiente nivel!
+                Explora videojuegos de plataformas 2D,
+                creados utilizando creatividad, diseño y programación.
+            </p>
+
+            <div class="tecnologia">
+                🧩 Scratch
+            </div>
+
+            <a href="videojuegosscratch.html" class="boton">
+                VER JUEGOS
+                <span>→</span>
+            </a>
+
+        </section>
+
+
+        <!-- Makecode -->
+        <section class="tarjeta">
+
+            <div class="icono">
+                👾
+            </div>
+
+            <span class="nivel">
+                GRADO 7°
+            </span>
+
+            <h2>Makecode</h2>
+
+            <p>
+                ¡Prepárate para una aventura espacial!
+                En este módulo podrás disfrutar de juegos
+                inspirados en los clásicos Arcade.
+            </p>
+
+            <div class="tecnologia">
+                🛸 Makecode
+            </div>
+
+            <a href="videjuegosMakecode.html" class="boton">
+                VER JUEGOS
+                <span>→</span>
+            </a>
+
+        </section>
+
+
+        <!-- UNITY -->
+        <section class="tarjeta">
+
+            <div class="icono">
+                🎮
+            </div>
+
+            <span class="nivel">
+                GRADOS 9° Y 11°
+            </span>
+
+            <h2>Unity</h2>
+
+            <p>
+                Descubre proyectos desarrollados con Unity,
+                combinando programación avanzada, Pixel Art,
+                mecánicas y gráficos 2D.
+            </p>
+
+            <div class="tecnologia">
+                ⚡ Unity
+            </div>
+
+            <a href="videojuegosunity.html" class="boton">
+                VER JUEGOS
+                <span>→</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            🎮 Galería de Videojuegos © 2026
+        </p>
+
+    </footer>
+
+</body>
+</html>
+
+
+</body>
+</html>

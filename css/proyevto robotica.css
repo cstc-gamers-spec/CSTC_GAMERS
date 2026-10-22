@@ -1,0 +1,286 @@
+:root {
+  --bg-main: #0a0f1d;
+  --bg-card: #12192c;
+  --bg-header: rgba(10, 15, 29, 0.95);
+  --accent-blue: #2563eb;
+  --accent-cyan: #00f0ff;
+  --accent-green: #22c55e;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border-glow: rgba(0, 240, 255, 0.2);
+  --font-tech: 'Segoe UI', 'Trebuchet MS', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-tech);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===================================================
+   BARRA DE NAVEGACIÓN (NAVBAR)
+   =================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: var(--bg-header);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-badge {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  color: #fff;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  color: var(--accent-cyan);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-cyan);
+}
+
+/* ===================================================
+   SECCIÓN HERO / ENCABEZADO PRINCIPAL
+   =================================================== */
+.hero-section {
+  padding: 4rem 5% 3rem 5%;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(0, 240, 255, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-title .highlight {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+/* ===================================================
+   GRILLA DE PROYECTOS / GALERÍA
+   =================================================== */
+.gallery-container {
+  padding: 3rem 5% 5rem 5%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* ===================================================
+   TARJETAS DE PROYECTOS (CARDS)
+   =================================================== */
+.project-card {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 10px 25px rgba(0, 240, 255, 0.15);
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.08);
+}
+
+/* Etiquetas (Tags) sobre las fotos */
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(10, 15, 29, 0.85);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tag-arduino { color: var(--accent-cyan); border-color: var(--accent-cyan); }
+.tag-vehiculo { color: #f59e0b; border-color: #f59e0b; }
+.tag-iot { color: var(--accent-green); border-color: var(--accent-green); }
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.card-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.8rem;
+}
+
+.creator {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.creator strong {
+  color: var(--accent-cyan);
+}
+
+/* ===================================================
+   PIE DE PÁGINA (FOOTER)
+   =================================================== */
+.footer {
+  text-align: center;
+  padding: 2rem 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Adaptabilidad a celulares */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .hero-stats { flex-direction: column; gap: 1rem; }
+  .navbar { flex-direction: column; gap: 1rem; }
+}

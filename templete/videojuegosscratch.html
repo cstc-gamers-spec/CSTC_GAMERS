@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegio Santo Tomás Chía - Galería Scratch</title>
+  <link rel="stylesheet" href="../CSS/videojueegosscracht.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-container">
+        <div class="top-bar-content">
+          <span class="phone-info">
+            <strong>LLÁMANOS +3008450894</strong>
+          </span>
+          <div class="social-links">
+            <span class="social-label">SÍGUENOS</span>
+            <a href="https://www.instagram.com/csantotochia/" aria-label="Instagram" id="instagramicon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/santotochia" aria-label="Facebook" id="facebookicon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03.78-1.5 1.75-1.5H18V2.14c-.42-.06-1.48-.14-2.81-.14-3.32 0-5.19 1.83-5.19 5.4v2.1H7v4h3v10.5h4V13.5z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UCjSazW1Ot1Mr_ROTHzRZefw/videos" aria-label="YouTube" id="youtubeicon">
+              <svg width="18" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="main-header-container">
+        <a href="#" class="logo">
+          <img src="../imagenes/logo video juegos.png" alt="Colegio Santo Tomás Chía">
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="https://colegiosantotomaschia.edu.co/">INICIO</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/nosotros/">SOBRE NOSOTROS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/admisiones-2022/">ADMISIONES</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/egresados/">EGRESADOS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/plataformas/">PLATAFORMAS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/habla-con-nosotros/">CONTÁCTANOS</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Buscar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <button class="icon-btn" aria-label="Menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL: GALERÍA DE JUEGOS -->
+  <main class="main-content">
+    <section class="features-section">
+      <div class="features-container">
+        <h1 class="section-title">PROYECTOS Y VIDEOJUEGOS EN SCRATCH</h1>
+
+        <div class="cards-grid">
+          
+          <!-- TARJETA DE JUEGO 1 -->
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°A</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div>
+            <div class="scratch-image-box">
+              <img src="../imagenes/Sofia Moreno y Juan jacobo.jpg" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">Aventura Espacial</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> Sofia Moreno y Juan jacobo</p>
+            </div>
+            <div class="scratch-card-footer">
+              <!-- Reemplaza 1012345678 con el ID real de tu proyecto de Scratch -->
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383418720/embed', 'Aventura Espacial')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+
+
+
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°c</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div>
+            <div class="scratch-image-box">
+              <img src="../imagenes/{4A67AB12-CD0B-4027-9DC2-65BE2B6963C6}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">Copa de navidad</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> PEREZ Y MATIAS ZAMORA SARMIENTO</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383432052/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+          
+
+
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°B</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div>
+            <div class="scratch-image-box">
+              <img src="../imagenes/{1F4E35FE-A36B-4703-B60E-0B812789EA6C}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">Juego vampiro</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> Sara y Danna</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383444919/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+          
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°c</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div>
+            <div class="scratch-image-box">
+              <img src="../imagenes/{8E93F227-DBF2-436B-8304-0AE525C5CFF8}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">Laberinto de la rara</h3>
+              <p class="game-authors"><strong>Integrantes:</strong>  gabriela  y maialen </p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383432152/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+           <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°c</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div>
+            <div class="scratch-image-box">
+              <img src="../imagenes/{A6D85B0A-73E5-4D10-B5C7-ED35472AAEAC}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">Desafio de las nubes</h3>
+              <p class="game-authors"><strong>Integrantes:</strong>  martin castillo </p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383431842/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°c</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div>
+            <div class="scratch-image-box">
+              <img src="../imagenes/{26BB4ACC-E70A-4466-A988-023A88DEC077}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">El camino de la pantera</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> julian y lizcano  </p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383431756/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°c</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/{5EE865DE-676F-44B4-9E87-DDDE523E48F3}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">la manzana aventurera</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> joaquin, dilan matabajor y emiliano cubillos  </p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383431494/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+           <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°c</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/{2E92562D-5A1F-4C87-909C-2D6FB4F4F0C5}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">El camino de las redes sociales</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> sofia piravaguen y maria fernanda poveda  </p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383431180/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-B</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/el perro y el mapa.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">El perro y el mapa</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> luci y aleja  </p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383430981/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+                  <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-B</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/el camino de las pociones.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">El Camino De Las Pociones</h3>
+              <p class="game-authors"><strong>Integrante:</strong> Isabella Castiblanco </p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383430832/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+                    <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-C</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/la travesia del sol.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">La Travesia Del Sol</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> Jeronimo Pataquiva y Isabella Agudelo</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383430697/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+          
+                    <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-B</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/El Extraterreste.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">El Extraterreste</h3>
+              <p class="game-authors"><strong>Integrante:</strong>Hector</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383430456/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+      <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-B</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/POOL.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">POOL</h3>
+              <p class="game-authors"><strong>Integrantes:</strong>cristian matias y isabella venegas</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383430328/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article> 
+
+          
+      <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-B</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/PARKOUR SOCCER.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">PARKOUR SOCCER</h3>
+              <p class="game-authors"><strong>Integrantes:</strong>Jeronimo Castiblanco y Juan Jose Cruz</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383429445/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+                <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-A</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/SPIDERMAN.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">SPIDERMAN</h3>
+              <p class="game-authors"><strong>Integrantes:</strong>Andres y Ariana</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383427911/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+                <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°-A</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div> 
+            <div class="scratch-image-box">
+              <img src="../imagenes/BAYMAX.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">BAYMAX</h3>
+              <p class="game-authors"><strong>Integrante:</strong>Paula Buitrago</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383428022/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+
+
+
+          
+
+
+
+
+          <!-- TARJETA DE JUEGO 2 -->
+          <article class="scratch-card">
+            <div class="scratch-card-header">
+              <span class="badge-curso">Curso: 6°B</span>
+              <span class="badge-software">Scratch 3.0</span>
+            </div>
+            <div class="scratch-image-box">
+              <img src="../imagenes/{4B40AAD8-7B4A-47D5-B224-22815E444038}.png" alt="Vista previa del juego" class="scratch-img">
+            </div>
+            <div class="scratch-card-body">
+              <h3 class="game-title">Laberinto del perro</h3>
+              <p class="game-authors"><strong>Integrantes:</strong> Cris y Matias</p>
+            </div>
+            <div class="scratch-card-footer">
+              <button class="btn-play" onclick="openGameModal('https://scratch.mit.edu/projects/1383430175/embed', 'Laberinto Ninja')">
+                ▶ JUGAR AQUÍ
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PANEL MODAL PARA CARGAR EL JUEGO DE SCRATCH -->
+  <div id="gameModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalGameTitle">Cargando Juego...</h3>
+        <button class="modal-close-btn" onclick="closeGameModal()" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="scratchFrame" src="" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>🎮 Galería de Videojuegos © 2026 - Colegio Santo Tomás Chía</p>
+  </footer>
+
+  <!-- SCRIPT PARA ABRIR Y CERRAR EL MODAL -->
+  <script>
+    function openGameModal(embedUrl, gameTitle) {
+      document.getElementById('modalGameTitle').textContent = gameTitle;
+      document.getElementById('scratchFrame').src = embedUrl;
+      document.getElementById('gameModal').classList.add('active');
+    }
+
+    function closeGameModal() {
+      document.getElementById('gameModal').classList.remove('active');
+      document.getElementById('scratchFrame').src = '';
+    }
+
+    // Cerrar al hacer clic fuera del cuadro
+    window.onclick = function(event) {
+      const modal = document.getElementById('gameModal');
+      if (event.target === modal) {
+        closeGameModal();
+      }
+    };
+  </script>
+
+</body>
+</html>

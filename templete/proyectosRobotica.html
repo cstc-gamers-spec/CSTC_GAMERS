@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegio Santo Tomás Chía</title>
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+
+  <!-- PANTALLA DE CARGA GAMER -->
+  <div id="gamer-loader">
+    <div class="loader-container">
+      <div class="loader-ring"></div>
+      <div class="loader-ring-inner"></div>
+      
+      <div class="loader-logo">
+        <img src="../imagenes/logo video juegos.png" alt="Logo Web Gamer" class="logo-img">
+      </div>
+    </div>
+    
+    <div class="loader-bar-container" id="bar-container">
+      <div id="loader-bar" class="loader-bar"></div>
+    </div>
+    
+    <div class="loader-text-group">
+      <span id="loader-title" class="loader-title">LOADING...</span>
+      <span id="loader-percent" class="loader-percent">0%</span>
+      <p id="loader-status" class="loader-status">PREPARANDO LA PARTIDA</p>
+      
+      <button id="start-btn" class="start-btn hidden">PRESS START</button>
+    </div>
+  </div>
+
+  <!-- Audio libre de derechos -->
+  <audio id="start-sound" src="../videos/poorartistt-cinematic-whoosh-sfx-type-01-566464.mp3" preload="auto"></audio>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-container">
+        <div class="top-bar-content">
+          <span class="phone-info">
+            <strong>LLÁMANOS +3008450894</strong>
+          </span>
+          <div class="social-links">
+            <span class="social-label">SÍGUENOS</span>
+            <a href="https://www.instagram.com/csantotochia/" aria-label="Instagram" id="instagramicon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/santotochia" aria-label="Facebook" id="facebookicon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03.78-1.5 1.75-1.5H18V2.14c-.42-.06-1.48-.14-2.81-.14-3.32 0-5.19 1.83-5.19 5.4v2.1H7v4h3v10.5h4V13.5z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UCjSazW1Ot1Mr_ROTHzRZefw/videos" aria-label="YouTube" id="youtubeicon">
+              <svg width="18" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="main-header-container">
+        <a href="#" class="logo">
+          <img src="../imagenes/logo video juegos.png" alt="Colegio Santo Tomás Chía">
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="https://colegiosantotomaschia.edu.co/">INICIO</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/nosotros/">SOBRE NOSOTROS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/admisiones-2022/">ADMISIONES</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/egresados/">EGRESADOS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/plataformas/">PLATAFORMAS</a></li>
+            <li><a href="https://colegiosantotomaschia.edu.co/habla-con-nosotros/">CONTÁCTANOS</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Buscar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <button class="icon-btn" aria-label="Menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- JAVASCRIPT MOVIDO AL FINAL DEL BODY -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loaderBar = document.getElementById('loader-bar');
+    const loaderPercent = document.getElementById('loader-percent');
+    const loaderStatus = document.getElementById('loader-status');
+    const loaderTitle = document.getElementById('loader-title');
+    const barContainer = document.getElementById('bar-container');
+    const startBtn = document.getElementById('start-btn');
+    const gamerLoader = document.getElementById('gamer-loader');
+    const startSound = document.getElementById('start-sound');
+
+    let currentPercent = 0;
+    const totalDuration = 1500; // 1.5 segundos en total
+    const intervalTime = 30; // Actualización cada 30 ms para máxima fluidez
+    const steps = totalDuration / intervalTime;
+    const increment = 100 / steps;
+
+    // Animación de la barra del 0% al 100% calibrada a 1.5 segundos
+    const interval = setInterval(() => {
+      currentPercent += increment;
+
+      if (currentPercent >= 100) {
+        currentPercent = 100;
+        clearInterval(interval);
+        updateProgress(100);
+
+        // Transición inmediata al botón START tras completar los 1.5s
+        barContainer.classList.add('hidden');
+        loaderPercent.classList.add('hidden');
+        loaderTitle.classList.add('hidden');
+        loaderStatus.textContent = "SISTEMA LISTO";
+        
+        startBtn.classList.remove('hidden');
+      } else {
+        updateProgress(Math.floor(currentPercent));
+      }
+    }, intervalTime);
+
+    function updateProgress(value) {
+      loaderBar.style.width = value + '%';
+      loaderPercent.textContent = value + '%';
+    }
+
+    // Acción al presionar START
+    startBtn.addEventListener('click', () => {
+      startSound.play().catch(() => {});
+      startBtn.style.transform = 'scale(0.9)';
+      
+      setTimeout(() => {
+        gamerLoader.classList.add('fade-out');
+        setTimeout(() => {
+          gamerLoader.classList.add('hidden');
+        }, 500);
+      }, 200);
+    });
+  });
+  </script>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robótica Arduino - Colegio Santo Tomás de Chía</title>
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN SUPERIOR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <div class="logo-badge">ST</div>
+      <span class="logo-text">GAMEBOTS <span>EXPO 2026</span></span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#categorias">Categorías</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN HERO / BIENVENIDA -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">⚡ EXPOSICIÓN DE ROBÓTICA & ARDUINO</span>
+      <h1 class="hero-title">PROYECTOS DE ROBÓTICA <br><span class="highlight">SANTO TOMÁS CHÍA</span></h1>
+      <p class="hero-description">
+        Explora la innovación y la creatividad tecnológica de nuestros estudiantes. Descubre brazos robóticos, vehículos autónomos y sistemas inteligentes impulsados por Arduino.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">+30</span>
+          <span class="stat-label">Proyectos Creados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">+50</span>
+          <span class="stat-label">Estudiantes Creadores</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Tecnología STEM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR PRINCIPAL / GALERÍA DE PROYECTOS -->
+  <main id="galeria" class="gallery-container">
+    <div class="section-header">
+      <h2 class="section-title">GALERÍA DE PROYECTOS</h2>
+      <p class="section-subtitle">Selecciona un proyecto para ver sus detalles de construcción y componentes Arduino.</p>
+    </div>
+
+    <!-- GRILLA DE PROYECTOS -->
+    <div class="projects-grid">
+
+      <!-- TARJETA PROYECTO 1 -->
+      <article class="project-card">
+        <div class="card-image-wrapper">
+          <span class="tag tag-arduino">Arduino Uno</span>
+          <!-- Reemplaza la URL en src="" con tu imagen -->
+          <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80" alt="Brazo Robótico" class="project-img">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Brazo Robótico Hídrico-Arduino</h3>
+          <p class="project-desc">Brazo mecánico articulado con 4 servomotores controlados por Joysticks analógicos y placa Arduino Uno.</p>
+          <div class="card-footer">
+            <span class="creator">Estudiante: <strong>Juan Pérez (Grado 10°)</strong></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA PROYECTO 2 -->
+      <article class="project-card">
+        <div class="card-image-wrapper">
+          <span class="tag tag-vehiculo">Autónomo</span>
+          <!-- Reemplaza la URL en src="" con tu imagen -->
+          <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80" alt="Carro Esquiva Obstáculos" class="project-img">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Carro Esquiva Obstáculos</h3>
+          <p class="project-desc">Vehículo autónomo con sensor ultrasónico HC-SR04 que detecta barreras y ajusta su trayectoria automáticamente.</p>
+          <div class="card-footer">
+            <span class="creator">Estudiante: <strong>María Rodríguez (Grado 11°)</strong></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA PROYECTO 3 -->
+      <article class="project-card">
+        <div class="card-image-wrapper">
+          <span class="tag tag-iot">IoT / Domótica</span>
+          <!-- Reemplaza la URL en src="" con tu imagen -->
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Invernadero Automatizado" class="project-img">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Invernadero Automatizado</h3>
+          <p class="project-desc">Sistema de riego y control de temperatura con sensores DHT11 y humedad de suelo conectados a servobomba.</p>
+          <div class="card-footer">
+            <span class="creator">Estudiante: <strong>Carlos Gómez (Grado 9°)</strong></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA PROYECTO 4 -->
+      <article class="project-card">
+        <div class="card-image-wrapper">
+          <span class="tag tag-arduino">Arduino Nano</span>
+          <!-- Reemplaza la URL en src="" con tu imagen -->
+          <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80" alt="Robot Seguidor de Línea" class="project-img">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Robot Seguidor de Línea</h3>
+          <p class="project-desc">Robot de alta velocidad equipado con sensores infrarrojos TCRT5000 para navegación sobre circuitos negros.</p>
+          <div class="card-footer">
+            <span class="creator">Estudiante: <strong>Ana Sofía López (Grado 11°)</strong></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUEDES COPIAR Y PEGAR MÁS TARJETAS AQUÍ MISMO -->
+
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <p>&copy; 2026 Colegio Santo Tomás de Chía — Sección de Robótica y Videojuegos.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

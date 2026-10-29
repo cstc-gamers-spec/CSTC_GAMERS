@@ -421,22 +421,13 @@
 
   <!-- SCRIPT PARA ABRIR Y CERRAR EL MODAL -->
   <script>
-    function fitGame() {
-  const body = document.querySelector('.modal-body');
-  const frame = document.getElementById('scratchFrame');
-  const scale = Math.min(
-    (body.clientWidth - 20) / 960,
-    (body.clientHeight - 20) / 650,
-    1
-  );
-  frame.style.transform = 'scale(' + scale + ')';
-}
+    
 
 function openGameModal(embedUrl, gameTitle) {
+  currentGameUrl = embedUrl.trim();
   document.getElementById('modalGameTitle').textContent = gameTitle;
-  document.getElementById('scratchFrame').src = embedUrl;
+  document.getElementById('scratchFrame').src = currentGameUrl;
   document.getElementById('gameModal').classList.add('active');
-  fitGame();
 }
 
 function closeGameModal() {
@@ -444,7 +435,7 @@ function closeGameModal() {
   document.getElementById('scratchFrame').src = '';
 }
 
-window.addEventListener('resize', fitGame);
+
 
 window.onclick = function (event) {
   const modal = document.getElementById('gameModal');

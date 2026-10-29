@@ -392,7 +392,7 @@ body {
 
 .game-wrap {
   position: relative;
-  overflow: hidden;      /* el tamaño real lo pone el JS */
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -400,14 +400,32 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 960px !important;
-  height: 650px !important;   /* canvas 600 + barra inferior */
-  max-width: none !important;
+  width: 960px;
+  height: 600px;
+  max-width: none;
   border: none;
   border-radius: 0;
   transform-origin: top left;
 }
 
+.game-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background: #0b111e;
+}
+
+.btn-bar {
+  background: var(--accent-red);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
 /* --- FOOTER --- */
 footer {
   text-align: center;

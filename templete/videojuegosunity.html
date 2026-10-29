@@ -422,6 +422,7 @@
   <!-- SCRIPT PARA ABRIR Y CERRAR EL MODAL -->
   <script>
     
+let currentGameUrl = '';
 
 function openGameModal(embedUrl, gameTitle) {
   currentGameUrl = embedUrl.trim();
@@ -435,7 +436,16 @@ function closeGameModal() {
   document.getElementById('scratchFrame').src = '';
 }
 
+function fullscreenGame() {
+  const f = document.getElementById('scratchFrame');
+  if (f.requestFullscreen) f.requestFullscreen();
+  else if (f.webkitRequestFullscreen) f.webkitRequestFullscreen();
+  else openInNewTab();
+}
 
+function openInNewTab() {
+  window.open(currentGameUrl, '_blank');
+}
 
 window.onclick = function (event) {
   const modal = document.getElementById('gameModal');

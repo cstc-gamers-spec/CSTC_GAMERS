@@ -423,14 +423,30 @@
 
   <!-- SCRIPT PARA ABRIR Y CERRAR EL MODAL -->
   <script>
-    
-let currentGameUrl = '';
+  const GAME_W = 960;
+const GAME_H = 650;      // incluye la barra inferior de Unity
+const MAX_SCALE = 0.6;   // tamaño máximo (baja a 0.5 para más pequeño)
+
+function fitGame() {
+  const wrap = document.getElementById('gameWrap');
+  const frame = document.getElementById('scratchFrame');
+  const header = document.querySelector('.modal-header');
+
+  const availW = window.innerWidth - 16;
+  const availH = window.innerHeight - header.offsetHeight - 16;
+
+  const scale = Math.min(availW / GAME_W, availH / GAME_H, MAX_SCALE);
+
+  wrap.style.width = (GAME_W * scale) + 'px';
+  wrap.style.height = (GAME_H * scale) + 'px';
+  frame.style.transform = 'scale(' + scale + ')';
+}
 
 function openGameModal(embedUrl, gameTitle) {
-  currentGameUrl = embedUrl.trim();
   document.getElementById('modalGameTitle').textContent = gameTitle;
-  document.getElementById('scratchFrame').src = currentGameUrl;
+  document.getElementById('scratchFrame').src = embedUrl.trim();
   document.getElementById('gameModal').classList.add('active');
+  fitGame();
 }
 
 function closeGameModal() {
@@ -438,16 +454,8 @@ function closeGameModal() {
   document.getElementById('scratchFrame').src = '';
 }
 
-function fullscreenGame() {
-  const f = document.getElementById('scratchFrame');
-  if (f.requestFullscreen) f.requestFullscreen();
-  else if (f.webkitRequestFullscreen) f.webkitRequestFullscreen();
-  else openInNewTab();
-}
-
-function openInNewTab() {
-  window.open(currentGameUrl, '_blank');
-}
+window.addEventListener('resize', fitGame);
+window.addEventListener('orientationchange', () => setTimeout(fitGame, 300));
 
 window.onclick = function (event) {
   const modal = document.getElementById('gameModal');

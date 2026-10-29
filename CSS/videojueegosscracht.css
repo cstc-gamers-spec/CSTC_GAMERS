@@ -413,8 +413,30 @@ footer {
   .cards-grid {
     grid-template-columns: 1fr;
   }
+  
 
   .nav-menu {
     display: none; /* Se oculta para móviles o requiere menú hamburguesa */
+  }
+}
+/* --- JUEGO MÁS PEQUEÑO EN CELULAR --- */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90vw;
+    height: auto;
+    max-width: 360px;
+    border-radius: 12px;
+  }
+
+  .modal-body {
+    padding: 10px;
+    flex-grow: 0;
+  }
+
+  .modal-body iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 385 / 302;   /* mantiene la proporción del juego */
+    max-width: 320px;
   }
 }

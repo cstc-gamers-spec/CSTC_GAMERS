@@ -419,7 +419,6 @@ footer {
     display: none; /* Se oculta para móviles o requiere menú hamburguesa */
   }
 }
-/* --- JUEGO MÁS PEQUEÑO EN CELULAR --- */
 @media (max-width: 768px) {
   .modal-content {
     width: 90vw;
@@ -436,7 +435,7 @@ footer {
   .modal-body iframe {
     width: 100%;
     height: auto;
-    aspect-ratio: 385 / 302;   /* mantiene la proporción del juego */
+    aspect-ratio: 16 / 10;
     max-width: 320px;
   }
 }

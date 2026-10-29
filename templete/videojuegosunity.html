@@ -401,18 +401,20 @@
   </main>
 
   <!-- PANEL MODAL PARA CARGAR EL JUEGO DE SCRATCH -->
-  <div id="gameModal" class="modal-overlay">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modalGameTitle">Cargando Juego...</h3>
-        <button class="modal-close-btn" onclick="closeGameModal()" aria-label="Cerrar">&times;</button>
-      </div>
-      <div class="modal-body">
-        <iframe id="scratchFrame" src="" allowtransparency="true" width="385" height="302" frameborder="0"
-          scrolling="no" allowfullscreen></iframe>
+ <div id="gameModal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modalGameTitle">Cargando Juego...</h3>
+      <button class="modal-close-btn" onclick="closeGameModal()" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="game-wrap" id="gameWrap">
+        <iframe id="scratchFrame" src="" allow="fullscreen; autoplay" allowfullscreen
+          frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
   </div>
+</div>
 
   <!-- PIE DE PÁGINA -->
   <footer>

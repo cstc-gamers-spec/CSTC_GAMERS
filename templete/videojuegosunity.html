@@ -412,6 +412,10 @@
         <iframe id="scratchFrame" src="" allow="fullscreen; autoplay" allowfullscreen
           frameborder="0" scrolling="no"></iframe>
       </div>
+      <div class="game-bar">
+        <button class="btn-bar" onclick="fullscreenGame()">⛶ Pantalla completa</button>
+        <button class="btn-bar" onclick="openInNewTab()">↗ Nueva pestaña</button>
+      </div>
     </div>
   </div>
 </div>
@@ -424,27 +428,32 @@
   <!-- SCRIPT PARA ABRIR Y CERRAR EL MODAL -->
   <script>
   const GAME_W = 960;
-const GAME_H = 650;      // incluye la barra inferior de Unity
-const MAX_SCALE = 0.6;   // tamaño máximo (baja a 0.5 para más pequeño)
+const GAME_H = 600;       // solo el juego; la barra ahora es la tuya
+const MAX_SCALE = 0.6;    // baja a 0.5 para más pequeño
+let currentGameUrl = '';
 
 function fitGame() {
+  if (document.fullscreenElement || document.webkitFullscreenElement) return;
   const wrap = document.getElementById('gameWrap');
   const frame = document.getElementById('scratchFrame');
   const header = document.querySelector('.modal-header');
+  const bar = document.querySelector('.game-bar');
 
   const availW = window.innerWidth - 16;
-  const availH = window.innerHeight - header.offsetHeight - 16;
-
+  const availH = window.innerHeight - header.offsetHeight - bar.offsetHeight - 16;
   const scale = Math.min(availW / GAME_W, availH / GAME_H, MAX_SCALE);
 
   wrap.style.width = (GAME_W * scale) + 'px';
   wrap.style.height = (GAME_H * scale) + 'px';
+  frame.style.width = GAME_W + 'px';
+  frame.style.height = GAME_H + 'px';
   frame.style.transform = 'scale(' + scale + ')';
 }
 
 function openGameModal(embedUrl, gameTitle) {
+  currentGameUrl = embedUrl.trim();
   document.getElementById('modalGameTitle').textContent = gameTitle;
-  document.getElementById('scratchFrame').src = embedUrl.trim();
+  document.getElementById('scratchFrame').src = currentGameUrl;
   document.getElementById('gameModal').classList.add('active');
   fitGame();
 }
@@ -453,6 +462,31 @@ function closeGameModal() {
   document.getElementById('gameModal').classList.remove('active');
   document.getElementById('scratchFrame').src = '';
 }
+
+function fullscreenGame() {
+  const f = document.getElementById('scratchFrame');
+  if (f.requestFullscreen) f.requestFullscreen();
+  else if (f.webkitRequestFullscreen) f.webkitRequestFullscreen();
+  else openInNewTab();   // iPhone no permite pantalla completa en iframes
+}
+
+function openInNewTab() {
+  window.open(currentGameUrl, '_blank');
+}
+
+// Al entrar a pantalla completa se quita el escalado; al salir se vuelve a ajustar
+function onFsChange() {
+  const frame = document.getElementById('scratchFrame');
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    frame.style.transform = 'none';
+    frame.style.width = '100%';
+    frame.style.height = '100%';
+  } else {
+    fitGame();
+  }
+}
+document.addEventListener('fullscreenchange', onFsChange);
+document.addEventListener('webkitfullscreenchange', onFsChange);
 
 window.addEventListener('resize', fitGame);
 window.addEventListener('orientationchange', () => setTimeout(fitGame, 300));

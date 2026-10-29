@@ -367,29 +367,45 @@ body {
   color: #ff4d4d;
 }
 
+
+
+
+
+
 .modal-content {
-  width: 100%;
-  height: 100dvh;          /* alto real visible en celular */
+  width: auto;
+  height: auto;
+  max-width: 100vw;
+  max-height: 100dvh;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .modal-body {
-  flex: 1;
   padding: 0;
-  display: block;          /* sin centrado flex que recorta */
-  overflow: auto;          /* permite bajar si hace falta */
-  -webkit-overflow-scrolling: touch;
+  display: block;
+  flex-grow: 0;
   background: #000;
 }
 
-.modal-body iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 420px;       /* asegura que quepa canvas + barra */
+.game-wrap {
+  position: relative;
+  overflow: hidden;      /* el tamaño real lo pone el JS */
+  margin: 0 auto;
+}
+
+.game-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 960px !important;
+  height: 650px !important;   /* canvas 600 + barra inferior */
+  max-width: none !important;
   border: none;
-  transform: none !important;  /* anula el escalado anterior */
+  border-radius: 0;
+  transform-origin: top left;
 }
 
 /* --- FOOTER --- */

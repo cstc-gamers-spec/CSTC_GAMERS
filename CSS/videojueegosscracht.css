@@ -392,7 +392,7 @@ body {
 /* Ajuste adicional para que el iframe escale al alto/ancho completo de la pantalla */
 .modal-body iframe {
   width: 960px;
-  height: 600px;
+  height: 650px;          /* 600 del canvas + ~50 de la barra inferior */
   max-width: none;
   flex-shrink: 0;
   transform-origin: center center;
